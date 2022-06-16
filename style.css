@@ -1,0 +1,186 @@
+:root{
+    --insta-gray: #FAFAFA;
+    --insta-white: #FFFFFF;
+    --insta-border: lightgray;
+    --insta-btn-primary: #4192ef;
+}
+
+@keyframes fadeIn{
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeOut{
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+body{
+    background-color: var(--insta-gray);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.landing-container{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#landing-images{
+    position: relative;
+}
+
+.insta-picture{
+    width: 480px;
+}
+
+.insta-profile{
+    width: 260px;
+    position: absolute;
+    left: 160px;
+    top: 25px;
+}
+
+#img2:hover{
+    animation: fadeIn 5s;
+}
+
+#img2{
+    animation: fadeOut 5s;
+    transition: 5s;
+}
+
+#logo{
+    text-align: center;
+}
+
+#logo > .insta-picture{
+    margin-bottom: 30px;
+    margin-top: 45px;
+    width: 60%;
+}
+
+.form-container{
+    background-color: var(--insta-white);
+    border: 1px solid var(--insta-border);
+    margin: 12px;
+    padding: 10px 30px 10px 30px;
+    width: 275px;
+}
+
+#insta-form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    background-color: var(--insta-gray);
+    color: var(--insta-border);
+    border: 1px solid var(--insta-border);
+    border-radius: 3px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+input:focus-visible{
+    outline: none;
+    border: 1px solid black; 
+}
+
+input::placeholder{
+    text-indent: 5px;
+    font-size: 0.95em;
+}
+
+.button-primary{
+    background-color: var(--insta-btn-primary);
+    color: var(--insta-white);
+    font-weight: bold;
+    border: none;
+    height: 30px;
+    border-radius: 3px;
+}
+
+p{
+    font-size: 0.9em;
+    text-align: center;
+}
+
+#tachado{
+    opacity: 0.5;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#tachado::before{
+    content: "";
+    width: 45%;
+    height: 1px;
+    margin-top: 7px;
+    background-color: var(--insta-border);
+    margin-right: 15px;
+}
+
+#tachado::after{
+    content: "";
+    width: 45%;
+    height: 1px;
+    margin-top: 7px;
+    background-color: var(--insta-border);
+    margin-left: 15px;
+}
+
+#login-facebook, #login-facebook > a{
+    color: #3e5081;
+    font-weight: bold;
+}
+
+#forgot > a{
+    font-size: 0.90em;
+    color: #3e5081;
+}
+
+a{
+    color: var(--insta-btn-primary);
+    text-decoration: none;
+}
+
+.app-button{
+    width: 128px;
+    margin-left: 10px;
+}
+
+footer, li > a, footer > p{
+    color: black;
+    font-size: 0.85em;
+    opacity: 0.7;
+}
+
+footer ul{
+    list-style: none;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+footer li{
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+@media(max-width: 875px){
+    #landing-images{
+        display: none;
+    }
+
+    footer{
+        margin-top: 15px;
+    }
+}
